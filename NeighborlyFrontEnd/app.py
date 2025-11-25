@@ -8,7 +8,10 @@ import json
 from feedgen.feed import FeedGenerator
 from flask import make_response
 from urllib.parse import urljoin
-from werkzeug.contrib.atom import AtomFeed
+#from werkzeug.contrib.atom import AtomFeed
+from feedgenerator import Atom1Feed as AtomFeed
+import settings
+print(f"API_URL is set to: {settings.API_URL}")
 
 app = Flask(__name__)
 Bootstrap(app)
